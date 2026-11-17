@@ -1,4 +1,4 @@
-"""Mo's Cafe: a starter floor, waiting for its owner.
+"""Mo's Cafe: Nora Wentz's floor (claim #3), from a starter.
 
 It shares the basement (floor B) with the Basement Library: the library is by the West elevator, and the
 cafe carries on to the east. The East elevator doesn't come down to the basement, so the far end of the cafe
@@ -11,7 +11,7 @@ from engine.kit import (CeilingLight, Couch, Desk, FloorLaser, PatrolBot, Plant,
 from engine.room import Platform, Room
 
 NAME = "Mo's Cafe"
-AUTHOR = "open: claim it"
+AUTHOR = "Nora Wentz"
 
 
 class Counter(Room):

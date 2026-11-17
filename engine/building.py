@@ -31,7 +31,8 @@ FLOOR_NAMES = {1: "Lobby / Flatiron Gallery", GOAL: "MFA Computer Arts"}
 # Pin a floor file to a floor number: "file_name": 4. Everyone else is placed in order.
 # The basement (0) is only used by floors pinned here. Two files pinned to the same number share that
 # floor, west to east in the order listed: the library by the West elevator, then Mo's Cafe.
-ASSIGN = {"fayth_elisa_navarro": BASEMENT, "mos_cafe": BASEMENT}
+ASSIGN = {"fayth_elisa_navarro": BASEMENT, "mos_cafe": BASEMENT,
+          "elise": 4, "brent_shultz": 6, "elle": 7, "yifan_wang": 11, "jerry_xu": 12}
 
 
 class Floor:
