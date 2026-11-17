@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        The list shows only what is still free. Taken so far: B (the Library + Mo's Cafe), 4, 5, 6, 7, 12.
+        The list shows only what is still free. Taken so far: B (the Library + Mo's Cafe), 4, 5, 6, 7, 11, 12.
         Floor 1 is the lobby and 10 is MFA Computer Arts. If what you want isn't listed, pick the closest and say so below.
   - type: dropdown
     id: piece
@@ -17,7 +17,6 @@ body:
         - "Floor 3 (your floor)"
         - "Floor 8 (your floor)"
         - "Floor 9 (your floor)"
-        - "Floor 11 (your floor)"
         - "Game piece: Movement"
         - "Game piece: Security"
         - "Game piece: Screens"
