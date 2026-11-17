@@ -3,24 +3,53 @@ description: Take ownership of a piece of the game - your floor, a kit part, or 
 title: "Claim: "
 labels: ["claim"]
 body:
-  - type: dropdown
-    id: kind
+  - type: markdown
     attributes:
-      label: What kind of piece
-      options:
-        - My floor (a real place in the building)
-        - A kit part that's already there
-        - A new kit part I'll make
-        - A game piece (movement, security, screens, the lobby, the kit's frame)
-    validations:
-      required: true
-  - type: input
+      value: |
+        The list shows only what is still free. Taken so far: B (the Library + Mo's Cafe), 4, 5, 6, 7, 12.
+        Floor 1 is the lobby and 10 is MFA Computer Arts. If what you want isn't listed, pick the closest and say so below.
+  - type: dropdown
     id: piece
     attributes:
       label: Which one
-      description: The place for a floor ("3D printing lab"), or the piece's name from OWNERS.md ("Kit Crusher", "Screens"), or your new part ("Kit Rug").
+      options:
+        - "Floor 2 (your floor)"
+        - "Floor 3 (your floor)"
+        - "Floor 8 (your floor)"
+        - "Floor 9 (your floor)"
+        - "Floor 11 (your floor)"
+        - "Game piece: Movement"
+        - "Game piece: Security"
+        - "Game piece: Screens"
+        - "Game piece: The lobby, floor 1"
+        - "Game piece: The kit's frame and its docs"
+        - "Kit part: Desk"
+        - "Kit part: Bookshelf"
+        - "Kit part: Locker"
+        - "Kit part: FilingCabinet"
+        - "Kit part: ServerRack"
+        - "Kit part: Printer3D"
+        - "Kit part: Easel"
+        - "Kit part: Couch"
+        - "Kit part: Plant"
+        - "Kit part: VendingMachine"
+        - "Kit part: Plinth"
+        - "Kit part: Crusher"
+        - "Kit part: Drone"
+        - "Kit part: FloorLaser"
+        - "Kit part: MovingPlatform"
+        - "Kit part: Window"
+        - "Kit part: Poster"
+        - "Kit part: Sign"
+        - "Kit part: CeilingLight"
+        - "A new kit part (name it below)"
     validations:
       required: true
+  - type: input
+    id: name
+    attributes:
+      label: Its name
+      description: For a floor, the real place in the building ("Printmaking studio"). For a new kit part, its name ("Kit Rug"). Otherwise leave it empty.
   - type: input
     id: github
     attributes:

@@ -2,8 +2,8 @@
 
 Every floor runs between two elevators: the WEST elevator at its left end and the EAST elevator at its
 right end. You get off one, walk the floor's rooms west to east (two or more), and get on the other.
-The West elevator stops at the lobby through floor 9; the East elevator stops at 2 through the top,
-including 10. So the only way up to 10 is across at least one floor.
+The West elevator stops at the lobby (and the basement) through floor 9; the East elevator stops at the
+lobby through the top, including 10. The door on 10 still needs the code, and the code is on the floors.
 
 Floors are found by file: every floors/<name>.py with its ROOMS (or LEFT and RIGHT) is in the game. Nobody edits
 this file to add a floor, so a whole class can add floors at once without a merge conflict here.
@@ -123,12 +123,13 @@ def west_stops(top_floor):
 
 
 def east_stops(top_floor):
-    return list(range(2, top_floor + 1))
+    """The lobby to the top, including 10: walk right through the gallery to board it."""
+    return list(range(1, top_floor + 1))
 
 
 def top(where):
-    """The highest floor in the building."""
-    return max([GOAL] + list(where))
+    """The highest floor in the building: 12, or higher if more floors than that are built."""
+    return max([TOP_FLOOR] + list(where))
 
 
 def label(number):
